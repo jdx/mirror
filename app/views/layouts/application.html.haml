@@ -17,7 +17,7 @@
           %a.brand{ href: root_path} MirrorApp
           .nav-collapse
             %ul.nav
-              %li= link_to "Check out", new_checkout_path
+              %li= link_to "Check out", checkout_path if user_signed_in?
             - if user_signed_in?
               %ul.nav.pull-right
                 %li.dropdown

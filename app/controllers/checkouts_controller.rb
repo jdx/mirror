@@ -1,8 +1,11 @@
 class CheckoutsController < ApplicationController
   before_filter :authenticate_user!
 
-  def new
-    @checkout = Checkout.new
+  def show
+    unless current_user.todays_checkout
+      @checkout = Checkout.new
+      render :new
+    end
   end
 
   def create

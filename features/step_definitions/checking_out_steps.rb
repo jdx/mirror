@@ -6,5 +6,6 @@ When /^I submit the check out form$/ do
 end
 
 Then /^I should have checked out$/ do
-  pending
+  click_link 'Check out'
+  page.should have_content 'You have already checked out today'
 end
