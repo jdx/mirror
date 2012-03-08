@@ -1,0 +1,8 @@
+%h2 Check out
+= simple_form_for @checkout, url: checkout_path do |f|
+  %fieldset
+    %legend Fill this out so you can relax tonight by being prepared for tomorrow!
+  = f.input :what_i_got_done
+  = f.input :what_i_didnt_get_done
+  = f.input :what_i_still_need_to_do
+  = f.button :submit, "Check out", class: 'btn-primary btn-large'
